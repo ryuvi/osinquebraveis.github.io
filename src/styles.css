@@ -1,0 +1,8 @@
+:root {
+  --color-primary: #f57c00;   /* 60% */
+  --color-secondary: #ffeddc; /* 30% */
+  --color-accent: #1a0d00;    /* 10% */
+  --color-bg: #f9f9f9;
+  --color-text: #333;
+  --color-white: #ffffff;
+}
