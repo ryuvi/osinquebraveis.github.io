@@ -38,7 +38,7 @@
     }
 
     p {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 
     .is-mobile {
@@ -55,6 +55,11 @@
 
     .contact-btn {
         font-size: 1rem !important;
+    }
+
+    .active {
+      color: #fff;
+      transition: all .5s;
     }
 
     @media screen and (max-width: 768px) {
@@ -86,7 +91,7 @@
 
   <body>
     <header style="height: 10dvh; z-index: 2;" class="position-fixed w-100">
-      <nav class="navbar navbar-expand-lg bg-dark h-100">
+      <nav class="navbar navbar-expand-lg bg-dark h-100" data-bs-theme="dark">
         <div class="container-fluid px-0">
           <button
             class="navbar-toggler border-light mx-2"
@@ -99,7 +104,7 @@
           <div class="collapse navbar-collapse bg-dark w-100" id="navbar">
             <ul class="navbar-nav ms-auto">
               <li class="mx-2 nav-item">
-                <a href="#inicio" class="nav-link link-light active">Início</a>
+                <a href="#inicio" class="nav-link active">Início</a>
               </li>
               <li class="mx-2 nav-item">
                 <a href="#quemsomos" class="nav-link">Quem Somos</a>
@@ -129,7 +134,7 @@
           class="img-fluid"
         />
         <h2 class="text-primary mt-4">
-          Representando o IFSP Caraguatatuba na competição COCAR 2025
+          Representando o <span class="text-success">IFSP Caraguatatuba</span> na competição <span class="text-info">COCAR 2025</span>
         </h2>
       </section>
 
@@ -150,25 +155,30 @@
         </div>
         <div class="img-text px-5" data-aos="fade-right">
           <h2 class="text-dark text-center mt-3"><strong>Quem Somos</strong></h2>
-          <p class="text-light">
-            Somos a equipe <strong>Os Inquebráveis</strong>, formada por
-            estudantes do 3º semestre de Engenharia Civil do IFSP - Campus
-            Caraguatatuba.
-          </p>
-
-          <p class="text-light">
-            Unidos pela paixão pela construção civil, representamos nossa
-            instituição com orgulho na competição
-            <strong>COCAR — Concreto Colorido de Alta Resistência.</strong>
-          </p>
-
-          <p class="text-light">
-            Nossa participação no
-            <strong>66º Congresso Brasileiro do Concreto</strong> é um passo
-            importante em nossa trajetória acadêmica, onde buscamos aplicar na
-            prática os conhecimentos adquiridos em sala de aula, incentivando a
-            pesquisa, a inovação e o trabalho em equipe.
-          </p>
+          <ul>
+            <li>
+              <p class="text-light">
+                Somos a equipe <strong>Os Inquebráveis</strong>, formada por
+                estudantes do 3º semestre de Engenharia Civil do IFSP - Campus
+                Caraguatatuba.
+              </p>
+            </li>
+            <li>
+              <p class="text-light">
+                Unidos pela paixão pela construção civil, representamos nossa
+                instituição com orgulho na competição
+                <strong>COCAR — Concreto Colorido de Alta Resistência.</strong>
+              </p>
+            </li>
+            <li>
+              <p class="text-light">
+                Nossa participação no
+                <strong>66º Congresso Brasileiro do Concreto</strong> é um passo
+                importante, pois vamos aplicar na
+                prática os conhecimentos adquiridos em sala de aula.
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -191,25 +201,25 @@
           <h2 class="text-primary text-center mt-3">
             <strong>Nosso Desafio</strong>
           </h2>
-          <p>
-            Participar do COCAR representa muito mais do que desenvolver um
-            concreto inovador — é encarar uma série de desafios técnicos,
-            logísticos e científicos.
-          </p>
-
-          <p>
-            A equipe precisa projetar um traço de concreto que combine alta
-            resistência (mínimo de 115 MPa) com coloração estética uniforme,
-            seguindo normas rígidas da ABNT e garantindo total homogeneidade nos
-            corpos de prova. Além disso, cada escolha de material, método de
-            cura e processo de ensaio exige precisão e controle.
-          </p>
-          <p>
-            Como estreantes no congresso, temos também o desafio institucional
-            de representar o IFSP pela primeira vez na competição, abrindo
-            caminho para futuras turmas e levando adiante o compromisso com a
-            ciência, a engenharia e a educação pública de qualidade
-          </p>
+          <ul>
+            <li>
+              <p>
+                Participar do COCAR representa muito mais do que desenvolver um
+                concreto inovador — é encarar uma série de desafios técnicos,
+                logísticos e científicos.
+              </p>
+            </li>
+            <li>
+              <p>
+                Para o desafio COCAR, a equipe deve criar um concreto de <strong>alta resistência (mín. 115 MPa)</strong> com coloração uniforme, seguindo as normas da ABNT e garantindo homogeneidade nos testes. A precisão é crucial na escolha de materiais, cura e ensaios.
+              </p>
+            </li>
+            <li>
+              <p>
+                Como estreantes no congresso, a equipe tem o desafio de representar o IFSP pela primeira vez na competição. Isso abre caminho para futuras turmas e reforça o compromisso com a ciência, engenharia e educação pública de qualidade.
+              </p>
+            </li>
+          </ul>
         </div>
         <div
           class="img-text d-flex justify-content-center is-not-mobile"
@@ -242,25 +252,23 @@
           <h2 class="text-dark text-center">
             <strong>Seja um Patrocinador</strong>
           </h2>
-          <p class="text-light">
-            Apoiar Os Inquebráveis é muito mais do que financiar uma equipe: é
-            investir no futuro da engenharia brasileira. Como representantes do
-            IFSP na maior competição estudantil de concreto do país, estamos
-            construindo conhecimento, inovação e orgulho acadêmico.
-          </p>
-
-          <p class="text-light">
-            Sua empresa pode fazer parte dessa jornada, associando sua marca a
-            valores como educação pública, ciência aplicada, sustentabilidade e
-            superação de desafios reais.
-          </p>
-
-          <p class="text-light">
-            Oferecemos visibilidade em nossos materiais digitais, camisetas,
-            banners e nas redes sociais. Cada categoria de patrocínio — Ouro,
-            Prata e Bronze — inclui benefícios específicos de exposição e
-            reconhecimento.
-          </p>
+          <ul>
+            <li>
+              <p class="text-light">
+                Apoiar Os Inquebráveis é investir no futuro da engenharia brasileira, financiando a construção de conhecimento, inovação e orgulho acadêmico como representantes do IFSP na maior competição estudantil de concreto do país.
+              </p>
+            </li>
+            <li>
+                <p class="text-light">
+                  Sua empresa pode se associar à educação pública, ciência aplicada, sustentabilidade e superação de desafios reais ao apoiar nossa jornada.
+                </p>
+            </li>
+            <li>
+              <p class="text-light">
+                Oferecemos visibilidade em diversos materiais (digitais, físicos e redes sociais) com benefícios específicos de exposição e reconhecimento para cada categoria de patrocínio (Ouro, Prata e Bronze).
+              </p>
+            </li>
+          </ul>
 
           <p class="text-light">
             Junte-se a nós e torne possível uma experiência transformadora!
@@ -276,22 +284,52 @@
       <small>&copy; 2025 - Os Inquebráveis | IFSP Caraguatatuba</small>
     </footer>
 
+    <script src="./src/noframework.waypoints.min.js">
+    </script>
+
     <script>
-      $(document).ready(function () {
-        $(".nav-link").click(function (e) {
-          e.preventDefault();
+function changeLinkActive(href) {
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    if (link.getAttribute('href') === href) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+  // updateIndicator(); // Removido daqui como solicitado
+}
 
-          const targetId = $(this).attr("href");
+document.addEventListener('DOMContentLoaded', () => {
+  // updateIndicator(); // Inicialização ainda pode ser útil
 
-          // troca active no menu
-          $(".nav-link").removeClass("active");
-          $(this).addClass("active");
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    new Waypoint({
+      element: section,
+      handler: function (direction) {
+        const href = "#" + this.element.id;
+        changeLinkActive(href);
+      },
+      offset: '50%'
+    });
+  });
 
-          // troca conteúdo visível
-          $("section").removeClass("active").hide();
-          $(targetId).fadeIn().addClass("active");
-        });
-      });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      changeLinkActive(this.getAttribute('href'));
+    });
+  });
+
+  // Lógica para ativar "Início" ao chegar no topo
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      changeLinkActive("#inicio");
+    }
+  });
+
+  // window.addEventListener('resize', updateIndicator); // Se você ainda precisa em algum outro lugar
+});
     </script>
 
     <script
