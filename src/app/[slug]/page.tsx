@@ -7,18 +7,16 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { Post } from "@interfaces/post";
 import { ImageDisplay } from "../components/ImageDisplay";
 
-type Props = {
-  params: { slug: string };
-};
 
-export async function generateStaticParams() {
-  const slugs = getPostSlugs();
-  return slugs.map((slug) => ({
-    slug: slug.replace(/\.mdx?$/, ""),
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const slugs = getPostSlugs(); // ['post-1', 'post-2']
+  return slugs.map(slug => ({
+    slug: slug.replace(/\.mdx?$/, '')
   }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   try {
     const post = (await getPostHtml(params.slug)) as Post;
     return {
@@ -32,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params }: {params: {slug: string}}) {
   const { slug } = params;
 
   try {
