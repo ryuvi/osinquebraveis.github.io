@@ -1,11 +1,11 @@
 import { getPostHtml, getPostSlugs } from "@lib/markdown";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import Header from "@components/Header";
-import Footer from "@components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Post } from "@interfaces/post";
-import { ImageDisplay } from "../components/ImageDisplay";
+import { ImageDisplay } from "../../components/ImageDisplay";
 
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {

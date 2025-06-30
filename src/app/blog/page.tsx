@@ -3,8 +3,8 @@ import { getAllPosts } from "@lib/markdown"; // função que você já deve ter
 import { Post } from "@interfaces/post";
 import Link from 'next/link'
 import Image from 'next/image'
-import Header from "@components/Header";
-import Footer from "@components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 type BlogCardProps = {
   post: Post;
