@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Post } from "@interfaces/post";
-import { ImageDisplay } from "../../components/ImageDisplay";
+import { ImageDisplay } from "@components/ImageDisplay";
 
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -16,9 +16,10 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 }
 
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{slug: string}> }): Promise<Metadata> {
   try {
-    const post = (await getPostHtml(params.slug)) as Post;
+    const {slug} = await params
+    const post = (await getPostHtml(slug)) as Post;
     return {
       title: post.meta.title,
       description: post.meta.excerpt || "",
@@ -30,8 +31,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function BlogPostPage({ params }: {params: {slug: string}}) {
-  const { slug } = params;
+export default async function BlogPostPage({ params }: { params: Promise<{slug: string}> }) {
+  const { slug } = await params;
 
   try {
     const post = (await getPostHtml(slug)) as Post;

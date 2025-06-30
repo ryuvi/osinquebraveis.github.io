@@ -1,5 +1,5 @@
 import { getAllPosts } from "@lib/markdown";
-import BlogCard from "../../components/BlogCard";
+import BlogCard from "@components/BlogCard";
 import { Post } from "@interfaces/post";
 import Link from "next/link";
 

@@ -21,15 +21,24 @@ function generateExcerpt(content: string, wordLimit = 40): string {
 }
 
 
+interface Meta {
+  title: string;
+  date: string;
+  excerpt: string;
+  author: string;
+  cover?: string;
+}
+
 export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.mdx?$/, '');
   const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+  const meta = {...data, excerpt: generateExcerpt(content)} as Meta;
 
   return {
     slug: realSlug,
-    meta: {...data, excerpt: generateExcerpt(content)},
+    meta: meta,
     content,
   };
 }
@@ -45,8 +54,11 @@ export function getAllPosts() {
   });
 
   // Ordena por data decrescente
+  console.log(posts)
   return posts.sort((a, b) => {
-    return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
+    const dateA = new Date(a.meta.date || 0).getTime();
+    const dateB = new Date(b.meta.date || 0).getTime();
+    return dateB - dateA;
   });
 }
 
