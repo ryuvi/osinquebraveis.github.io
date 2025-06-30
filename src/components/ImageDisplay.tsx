@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 function slugify(text: string): string {
   return text
     .normalize("NFD") // separa acentos das letras
@@ -15,18 +17,19 @@ export function ImageDisplay({ title }: { title: string }) {
   return (
     <div className="flex flex-col items-center my-6">
       <div style={{ height: "fit-content", width: "fit-content" }}>
-        <img
+        <Image
           src={src}
           alt={title}
+          height={1024}
+          width={1024}
           style={{
-            width: "500px",
-            marginTop: "0 !important",
-            marginBottom: "0 !important",
+            maxWidth: '512px',
+            marginBottom: 0
           }}
-          className="object-coverrounded"
+          className="object-cover rounded mb-0"
         />
       </div>
-      <p className="text-center mt-2 text-sm text-gray-500 italic">{title}</p>
+      <p className="text-center text-sm mt-0 text-gray-500 italic">{title}</p>
     </div>
   );
 }
