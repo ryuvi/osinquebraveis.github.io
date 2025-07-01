@@ -35,11 +35,6 @@ export default function WeAre({
             Caraguatatuba.
           </li>
           <li>
-            (tirar um pouco de fada) Nosso objetivo principal é desenvolver um
-            concreto inovador, com a finalidade de se tornar um material mais
-            eficiente e sustentável.
-          </li>
-          <li>
             Unidos pela paixão pela construção civil, representamos nossa
             instituição com orgulho na competição{" "}
             <strong>COCAR — Concreto Colorido de Alta Resistência</strong>.
